@@ -9,6 +9,35 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta http-equiv="refresh" content="55">
 </head>
+  <body>
   <div class="video w3-center w3-padding-small">
             <iframe src="https://www.youtube.com/embed/q7xi1pU51AY?si=OLSSddQ0mMt4Uli6" allowfullscreen></iframe>
         </div>
+   <br>
+    <button id="nextBtn">Suivant ➡️</button>
+
+    <script>
+        // Tableau des liens vidéo
+        const liens = [
+            "https://www.youtube.com/embed/VID1_ID",
+            "https://www.youtube.com/embed/VID2_ID",
+            "https://www.youtube.com/embed/VID3_ID"
+        ];
+
+        // Variable pour suivre l'index actuel de la vidéo
+        let index = 0;
+
+        // Récupérer l'élément iframe
+        const videoPlayer = document.getElementById("videoPlayer");
+
+        // Fonction pour changer la vidéo
+        function changerVideo() {
+            index = (index + 1) % liens.length;  // Passer à la vidéo suivante (boucle)
+            videoPlayer.src = liens[index];      // Changer la source de l'iframe
+        }
+
+        // Associer la fonction au bouton
+        document.getElementById("nextBtn").addEventListener("click", changerVideo);
+    </script>
+</body>
+</html>

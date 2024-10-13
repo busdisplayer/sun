@@ -28,6 +28,7 @@
     <button class="w3-button w3-blue" id="meditationBtn">Méditation</button>
     <button class="w3-button w3-red" id="documentaireBtn">Documentaire</button>
     <button class="w3-button w3-green" id="musiqueBtn">Musique</button>
+    <button class="w3-button w3-green" id="philoBtn">Philosophie</button>
   </div>
 
    <script>
@@ -38,6 +39,12 @@
       "https://www.youtube.com/embed/nVnba5N-SHg?si=SelGBCOYSUjS6EmU",
       "https://www.youtube.com/embed/R9fnAMZopBw?si=DXrNYvT-BKgIMcxz",
       "https://www.youtube.com/embed/IIOILYRvf_8?si=kHX-EYDf5eSrSB8l"
+    ];
+
+      const liensPhilo = [
+      "https://www.youtube.com/embed/1Tdl89vfdV0?si=mXTT1_p_Qir4aWGu",
+      "https://www.youtube.com/embed/UzPJ4FhrFXs?si=04syLLNUmX_Dge-3",
+      "https://www.youtube.com/embed/L1GHV_8SoxM?si=uRdUWf_z4j82I27r"
     ];
 
     const liensMeditation = [
@@ -96,6 +103,13 @@
      document.getElementById("musiqueBtn").addEventListener("click", () => {
       index = 0; // Réinitialiser l'index
       liens = liensMusique; // Changer la liste à celle du documentaire
+     videoPlayer.src = liens[index] + "?rel=0&modestbranding=1&controls=1&iv_load_policy=3";
+ // Charger la première vidéo de la nouvelle liste
+    });
+
+     document.getElementById("philoBtn").addEventListener("click", () => {
+      index = 0; // Réinitialiser l'index
+      liens = liensPhilo; // Changer la liste à celle du documentaire
      videoPlayer.src = liens[index] + "?rel=0&modestbranding=1&controls=1&iv_load_policy=3";
  // Charger la première vidéo de la nouvelle liste
     });

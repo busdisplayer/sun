@@ -47,7 +47,7 @@
     ];
 
     const liensDocumentaire = [
-      "https://www.youtube.com/embed/hDqlHbLUHuM?si=3tIAmMqNOm_cISNM", // Exemple d'URL pour documentaire
+      "https://www.youtube.com/embed/c8clyw7bhpM?si=UtKZXarAOv026vPJ", // Exemple d'URL pour documentaire
       "https://www.youtube.com/embed/mDYyzaycH-4?si=6qBj82-84jlv7HUr", // Exemple d'URL pour documentaire
       "https://www.youtube.com/embed/YLbPEiz3xq0?si=BWIwmPNRXOKg0y2Y"  // Exemple d'URL pour documentaire
     ];
@@ -96,7 +96,8 @@
      document.getElementById("musiqueBtn").addEventListener("click", () => {
       index = 0; // Réinitialiser l'index
       liens = liensMusique; // Changer la liste à celle du documentaire
-      videoPlayer.src = liens[index]; // Charger la première vidéo de la nouvelle liste
+     videoPlayer.src = liens[index] + "?rel=0&modestbranding=1&controls=1&iv_load_policy=3";
+ // Charger la première vidéo de la nouvelle liste
     });
 
 

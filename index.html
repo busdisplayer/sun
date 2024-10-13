@@ -81,6 +81,30 @@
     });
 
   </script>
+  <script>
+  // Fonction pour ajuster la hauteur de l'iframe en fonction de sa largeur
+  function ajusterHauteurIframe() {
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    if (videoPlayer) {
+      // Obtenez la largeur actuelle de l'iframe (qui est à 100% de son conteneur)
+      const largeur = videoPlayer.offsetWidth;
+      
+      // Calculer la hauteur en fonction du ratio 500:450 (soit 10:9)
+      const hauteur = (450 / 500) * largeur;
+      
+      // Appliquer la hauteur calculée à l'iframe
+      videoPlayer.style.height = hauteur + 'px';
+    }
+  }
+
+  // Appeler la fonction au chargement de la page
+  window.onload = ajusterHauteurIframe;
+
+  // Appeler la fonction à chaque redimensionnement de la fenêtre pour que l'iframe s'ajuste dynamiquement
+  window.onresize = ajusterHauteurIframe;
+</script>
+
 
 </body>
 </html>

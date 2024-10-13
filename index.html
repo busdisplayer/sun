@@ -23,6 +23,7 @@
     <button class="w3-button w3-green" id="humourBtn">Humour</button>
     <button class="w3-button w3-blue" id="meditationBtn">Méditation</button>
     <button class="w3-button w3-red" id="documentaireBtn">Documentaire</button>
+    <button class="w3-button w3-green" id="musiqueBtn">Musique</button>
   </div>
 
    <script>
@@ -40,6 +41,12 @@
     ];
 
     const liensDocumentaire = [
+      "https://www.youtube.com/embed/A0o3W3E_P7A", // Exemple d'URL pour documentaire
+      "https://www.youtube.com/embed/3Vgq8HQ8YBk", // Exemple d'URL pour documentaire
+      "https://www.youtube.com/embed/vEEtQX6t5-M"  // Exemple d'URL pour documentaire
+    ];
+
+     const liensMusique = [
       "https://www.youtube.com/embed/A0o3W3E_P7A", // Exemple d'URL pour documentaire
       "https://www.youtube.com/embed/3Vgq8HQ8YBk", // Exemple d'URL pour documentaire
       "https://www.youtube.com/embed/vEEtQX6t5-M"  // Exemple d'URL pour documentaire
@@ -79,6 +86,13 @@
       liens = liensDocumentaire; // Changer la liste à celle du documentaire
       videoPlayer.src = liens[index]; // Charger la première vidéo de la nouvelle liste
     });
+
+     document.getElementById("musiqueBtn").addEventListener("click", () => {
+      index = 0; // Réinitialiser l'index
+      liens = liensMusique; // Changer la liste à celle du documentaire
+      videoPlayer.src = liens[index]; // Charger la première vidéo de la nouvelle liste
+    });
+
 
   </script>
   <script>
